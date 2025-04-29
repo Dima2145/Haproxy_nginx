@@ -67,6 +67,10 @@ backend web_servers    # секция бэкенд
         server s2 127.0.0.1:9999 check
 ```
 
+![Снимок234](https://github.com/user-attachments/assets/e7d9f66a-5160-4e74-989d-95b63599dcb2)
+
+
+
 ## Задание 2  
 Запустите три simple python сервера на своей виртуальной машине на разных портах  
 Настройте балансировку Weighted Round Robin на 7 уровне, чтобы первый сервер имел вес 2, второй - 3, а третий - 4  
