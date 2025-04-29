@@ -76,7 +76,7 @@ backend web_servers    # секция бэкенд
 * Настройте балансировку Weighted Round Robin на 7 уровне, чтобы первый сервер имел вес 2, второй - 3, а третий - 4  
 * HAproxy должен балансировать только тот http-трафик, который адресован домену example.local  
 * На проверку направьте конфигурационный файл haproxy, скриншоты, где видно перенаправление запросов на разные серверы при обращении к HAProxy c использованием домена example.local и без него.  
-# Решение 1
+## Решение 2
 ```
 global
 	log /dev/log	local0
@@ -135,7 +135,7 @@ backend web_servers    # секция бэкенд
         http-check send meth GET uri /index.html
         server s1 127.0.0.1:8888 weight 2 check
         server s2 127.0.0.1:9999 weight 3 check
-		server s3 127.0.0.1:3333 weight 4 check
+	server s3 127.0.0.1:3333 weight 4 check
 
 ```
 ![Снимок235](https://github.com/user-attachments/assets/5a853d7b-1a60-4f95-b7d8-48d43db7abbe)
